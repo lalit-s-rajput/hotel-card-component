@@ -1,20 +1,7 @@
-/**
- * @license
- * Copyright 2019 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 import {LitElement, html} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {hotelCardCss} from './hotel-card.css';
 import {data} from './mockData/mockData';
-/**
- * An example element.
- *
- * @fires count-changed - Indicates when the count changes
- * @slot - This element has a slot
- * @csspart button - The button
- */
 @customElement('hotel-card')
 export class hotelCard extends LitElement {
   static override styles = hotelCardCss;
@@ -25,7 +12,9 @@ export class hotelCard extends LitElement {
   override render() {
     return html`
       <div class="container">
-        <div class="image-container"></div>
+        <div class="image-container">
+          <img src="${this.hotelInfo.main_photo_url}" alt="" />
+        </div>
         <div class="hotel-info">
           <div class="name-and-rating-block display-css">
             <h2 class="hotel-name m-right-left-10">

@@ -74,7 +74,7 @@ export const data = {
       },
       main_photo_id: 224463704,
       main_photo_url:
-        'https://cf.bstatic.com/xdata/images/hotel/square60/224463704.jpg?k=d898a8fdbf8e69cbe6f6b9e4d9b8f4af3942432b0b441d2daf023c3181e349ca&o=',
+        'https://cf.bstatic.com/xdata/images/hotel/square250/224463704.jpg?k=d898a8fdbf8e69cbe6f6b9e4d9b8f4af3942432b0b441d2daf023c3181e349ca&o=',
       native_ads_cpc: 0,
       cant_book: 0,
       block_ids: ['457542105_335356040_6_0_0'],

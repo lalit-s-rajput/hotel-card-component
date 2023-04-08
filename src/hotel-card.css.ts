@@ -24,12 +24,19 @@ export const hotelCardCss = css`
     width: 25%;
     height: 100%;
   }
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
   .hotel-info {
     display: flex;
     flex-direction: column;
     width: 50%;
     height: 100%;
-    margin: 10px;
+    margin: 10px 20px;
   }
   .display-css {
     display: flex;
@@ -75,7 +82,7 @@ export const hotelCardCss = css`
   }
   .total-review p,
   h3 {
-    margin: 0 5px 0 0;
+    margin: 0 8px 0 0;
   }
   .rating-badge {
     /* margin: 0 10px; */
@@ -109,7 +116,7 @@ export const hotelCardCss = css`
     margin-right: 5px;
   }
   .see-availability-button {
-    width: 50%;
+    width: 70%;
     height: 40px;
     background-color: #006ce4;
     color: white;
@@ -118,6 +125,6 @@ export const hotelCardCss = css`
     box-shadow: none;
     border: none;
     font-weight: bold;
-    font-size: larger;
+    text-align: center;
   }
 `;
