@@ -1,12 +1,16 @@
 /node_modules/
 /lib/
 /test/
-/dist/
+/dist/mockData
+/dist/test
 custom-elements.json
 # top level source
-my-element.js
-my-element.js.map
-my-element.d.ts
-my-element.d.ts.map
+/dist/hotel-card.js.map
+/dist/hotel-card.d.ts
+/dist/hotel-card.d.ts.map
+/dist/hotel-card.css.d.ts
+/dist/hotel-card.css.d.ts.map
+/dist/hotel-card.css.js
+/dist/hotel-card.css.js.map
 # only generated for size check
-my-element.bundled.js
+/dist/hotel-card.bundled.js
