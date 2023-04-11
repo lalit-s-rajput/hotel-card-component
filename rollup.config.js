@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import summary from 'rollup-plugin-summary';
+//import summary from 'rollup-plugin-summary';
 import {terser} from 'rollup-plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
-
+import {babel} from '@rollup/plugin-babel';
 export default {
-  input: 'hotel-card.js',
+  input: 'dist/hotel-card.js',
   output: {
     file: 'hotel-card.bundled.js',
     format: 'esm',
@@ -33,6 +33,7 @@ export default {
         },
       },
     }),
-    summary(),
+    //summary(),
+    babel({babelHelpers: 'bundled'}),
   ],
 };
