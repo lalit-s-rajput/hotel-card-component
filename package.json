@@ -1,11 +1,12 @@
 {
   "name": "hotel-card-component",
-  "private": true,
-  "version": "1.0.5",
+  "private": false,
+  "version": "1.0.6",
   "description": "hotel card component same as booking.com page",
-  "main": "hotel-card.js",
-  "module": "hotel-card.js",
+  "main": "hotel-card.bundled.js",
+  "module": "hotel-card.bundled.js",
   "type": "module",
+  "types": "dist/hotel-card.d.ts",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
@@ -18,7 +19,7 @@
     "docs:clean": "rimraf docs",
     "docs:gen": "eleventy --config=.eleventy.cjs",
     "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
-    "docs:build": "rollup -c --file docs/my-element.bundled.js",
+    "docs:build": "rollup -c --file docs/hotel-card.bundled.js",
     "docs:assets": "cp node_modules/prismjs/themes/prism-okaidia.css docs/",
     "docs:serve": "wds --root-dir=docs --node-resolve --watch",
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
@@ -30,7 +31,7 @@
     "test:watch": "wtr --watch",
     "test:prod": "MODE=prod wtr",
     "test:prod:watch": "MODE=prod wtr --watch",
-    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
+    "checksize": "rollup -c ; cat hotel-card.bundled.js | gzip -9 | wc -c ; rm hotel-card.bundled.js"
   },
   "keywords": [
     "web-components",
@@ -46,8 +47,12 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.21.0",
     "@custom-elements-manifest/analyzer": "^0.6.3",
     "@open-wc/testing": "^3.1.5",
+    "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^5.0.2",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
