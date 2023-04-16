@@ -4,8 +4,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { LitElement, html, customElement } from 'lit-element';
+import { property } from 'lit/decorators.js';
 import { hotelCardCss } from './hotel-card.css';
 import { data } from './mockData/mockData';
 let hotelCard = class hotelCard extends LitElement {
@@ -17,7 +17,10 @@ let hotelCard = class hotelCard extends LitElement {
         return html `
       <div class="container">
         <div class="image-container">
-          <img src="${this.hotelInfo.main_photo_url}" alt="" />
+          <image-slider
+            imageArray="${this.hotelInfo.main_photo_url}"
+          ></image-slider>
+          <!-- <img src="${this.hotelInfo.main_photo_url}" alt="" /> -->
         </div>
         <div class="hotel-info">
           <div class="name-and-rating-block display-css">
@@ -78,7 +81,6 @@ let hotelCard = class hotelCard extends LitElement {
           </div>
         </div>
       </div>
-      <slot></slot>
     `;
     }
 };

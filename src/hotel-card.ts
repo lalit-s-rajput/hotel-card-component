@@ -1,5 +1,5 @@
-import {LitElement, html} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import {LitElement, html, customElement} from 'lit-element';
+import {property} from 'lit/decorators.js';
 import {hotelCardCss} from './hotel-card.css';
 import {data} from './mockData/mockData';
 @customElement('hotel-card')
@@ -8,12 +8,14 @@ export class hotelCard extends LitElement {
 
   @property()
   hotelInfo = data.result[0];
-
   override render() {
     return html`
       <div class="container">
         <div class="image-container">
-          <img src="${this.hotelInfo.main_photo_url}" alt="" />
+          <image-slider
+            imageArray="${this.hotelInfo.main_photo_url}"
+          ></image-slider>
+          <!-- <img src="${this.hotelInfo.main_photo_url}" alt="" /> -->
         </div>
         <div class="hotel-info">
           <div class="name-and-rating-block display-css">
@@ -74,7 +76,6 @@ export class hotelCard extends LitElement {
           </div>
         </div>
       </div>
-      <slot></slot>
     `;
   }
 }

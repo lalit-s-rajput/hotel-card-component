@@ -1,7 +1,7 @@
 {
   "name": "hotel-card-component",
   "private": false,
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "hotel card component same as booking.com page",
   "main": "hotel-card.bundled.js",
   "module": "hotel-card.bundled.js",

@@ -12,5 +12,6 @@ custom-elements.json
 /dist/hotel-card.css.d.ts.map
 /dist/hotel-card.css.js
 /dist/hotel-card.css.js.map
+dist/baseComponents
 # only generated for size check
 /dist/hotel-card.bundled.js
